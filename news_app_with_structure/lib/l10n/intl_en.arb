@@ -1,5 +1,5 @@
 {
     "@@locale": "en",
     "app_title": "Basic App Structure Demo",
-    "login_faild": "Login failed."
+    "login_failed": "Login failed."
 }

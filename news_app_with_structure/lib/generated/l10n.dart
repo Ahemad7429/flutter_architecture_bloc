@@ -14,23 +14,22 @@ import 'intl/messages_all.dart';
 
 class Localization {
   Localization();
-
+  
   static Localization current;
-
-  static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
+  
+  static const AppLocalizationDelegate delegate =
+    AppLocalizationDelegate();
 
   static Future<Localization> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false)
-        ? locale.languageCode
-        : locale.toString();
-    final localeName = Intl.canonicalizedLocale(name);
+    final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
+    final localeName = Intl.canonicalizedLocale(name); 
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
       Localization.current = Localization();
-
+      
       return Localization.current;
     });
-  }
+  } 
 
   static Localization of(BuildContext context) {
     return Localizations.of<Localization>(context, Localization);
@@ -50,7 +49,7 @@ class Localization {
   String get login_failed {
     return Intl.message(
       'Login failed.',
-      name: 'login_faild',
+      name: 'login_failed',
       desc: '',
       args: [],
     );
