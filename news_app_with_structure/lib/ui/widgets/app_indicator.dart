@@ -8,7 +8,6 @@ class AppIndicator extends StatelessWidget {
       color: Colors.white,
       width: MediaQuery.of(context).size.width,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           SizedBox(
@@ -16,8 +15,7 @@ class AppIndicator extends StatelessWidget {
             width: 25.0,
             child: CircularProgressIndicator(
               valueColor:
-                  new AlwaysStoppedAnimation<Color>(AppTheme.color.mainColor),
-              strokeWidth: 4.0,
+                  AlwaysStoppedAnimation<Color>(AppTheme.color.mainColor),
             ),
           )
         ],

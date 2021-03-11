@@ -10,7 +10,7 @@ class LoginResponseModel {
       return null;
     }
     return LoginResponseModel(
-      token: data['token'],
+      token: data['token'] as String,
     );
   }
 }

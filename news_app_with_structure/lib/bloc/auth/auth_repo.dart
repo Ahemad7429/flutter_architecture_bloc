@@ -3,7 +3,7 @@ import 'package:news_app_with_structure/utils/constants/app_constant.dart';
 
 class AuthRepository extends BaseRepository {
   Future<bool> hasToken() async {
-    var value =
+    final value =
         await prefService.getStringPrefValue(key: AppConst.prefKeys.token);
     if (value.isNotEmpty) {
       return true;

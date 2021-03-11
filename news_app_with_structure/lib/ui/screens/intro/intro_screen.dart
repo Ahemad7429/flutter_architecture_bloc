@@ -6,7 +6,7 @@ import 'package:news_app_with_structure/utils/constants/app_constant.dart';
 import 'package:news_app_with_structure/utils/theme/app_theme.dart';
 
 class IntroScreen extends StatefulWidget {
-  IntroScreen();
+  const IntroScreen();
   @override
   _IntroScreenState createState() => _IntroScreenState();
 }
@@ -24,11 +24,11 @@ class _IntroScreenState extends State<IntroScreen> {
     PageViewModel(
       titleWidget: Column(
         children: <Widget>[
-          Text(
+          const Text(
             'FREE GIFT',
             style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600),
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           Container(
@@ -55,7 +55,7 @@ class _IntroScreenState extends State<IntroScreen> {
     PageViewModel(
       titleWidget: Column(
         children: <Widget>[
-          Text(
+          const Text(
             'PAYMENT INTEGRATION',
             textAlign: TextAlign.center,
             style: TextStyle(
@@ -63,7 +63,7 @@ class _IntroScreenState extends State<IntroScreen> {
               fontWeight: FontWeight.w600,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           Container(
@@ -94,11 +94,11 @@ class _IntroScreenState extends State<IntroScreen> {
     PageViewModel(
       titleWidget: Column(
         children: <Widget>[
-          Text(
+          const Text(
             'CALL CENTER',
             style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600),
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           Container(
@@ -131,7 +131,7 @@ class _IntroScreenState extends State<IntroScreen> {
   @override
   Widget build(BuildContext context) {
     return clicked
-        ? LoginScreen()
+        ? const LoginScreen()
         : IntroductionScreen(
             pages: pages,
             onDone: () {

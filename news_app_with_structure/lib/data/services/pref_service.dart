@@ -8,10 +8,8 @@ class PreferenceService {
     _init();
   }
 
-  _init() async {
-    if (prefs == null) {
-      prefs = await SharedPreferences.getInstance();
-    }
+  Future<void> _init() async {
+    prefs ??= await SharedPreferences.getInstance();
   }
 
   Future<void> seBoolPrefValue(

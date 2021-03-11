@@ -1,3 +1,4 @@
+import 'package:news_app_with_structure/data/services/flavor_config.dart';
 import 'package:news_app_with_structure/generated/l10n.dart';
 
 part 'assets.dart';
@@ -10,10 +11,10 @@ part 'dimens.dart';
 class AppConst {
   const AppConst._();
 
-  static var strings = _Strings();
-  static var assets = _Assets();
-  static var web = _Web();
-  static var prefKeys = _PrefKeys();
-  static var apiPath = _APIPath();
-  static var dimens = _Dimens();
+  static _Strings strings = _Strings();
+  static _Assets assets = _Assets();
+  static _Web web = _Web();
+  static _PrefKeys prefKeys = _PrefKeys();
+  static _APIPath apiPath = _APIPath();
+  static _Dimens dimens = _Dimens();
 }

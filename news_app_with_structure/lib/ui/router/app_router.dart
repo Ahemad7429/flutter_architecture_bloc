@@ -6,7 +6,6 @@ import 'package:news_app_with_structure/bloc/login/bloc.dart';
 import 'package:news_app_with_structure/ui/screens/home/home_screen.dart';
 import 'package:news_app_with_structure/ui/screens/intro/intro_screen.dart';
 import 'package:news_app_with_structure/ui/screens/splash/splash_screen.dart';
-import 'package:news_app_with_structure/ui/widgets/app_indicator.dart';
 import 'package:news_app_with_structure/utils/theme/app_theme.dart';
 
 class AppRouterPath {
@@ -24,7 +23,7 @@ class AppRouter {
                 return HomeScreen();
               }
               if (state is AuthenticationUnauthenticated) {
-                return IntroScreen();
+                return const IntroScreen();
               }
               if (state is LoadingState) {
                 return Scaffold(
@@ -32,16 +31,14 @@ class AppRouter {
                     color: Colors.white,
                     width: MediaQuery.of(context).size.width,
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         SizedBox(
                           height: 25.0,
                           width: 25.0,
                           child: CircularProgressIndicator(
-                            valueColor: new AlwaysStoppedAnimation<Color>(
+                            valueColor: AlwaysStoppedAnimation<Color>(
                                 AppTheme.color.mainColor),
-                            strokeWidth: 4.0,
                           ),
                         )
                       ],

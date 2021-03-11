@@ -5,7 +5,7 @@ import 'package:news_app_with_structure/ui/screens/login/login_widgets/login_for
 import 'package:news_app_with_structure/utils/helpers/service_locator.dart';
 
 class LoginScreen extends StatelessWidget {
-  LoginScreen();
+  const LoginScreen();
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class LoginScreen extends StatelessWidget {
         create: (context) {
           return locator.get<LoginBloc>();
         },
-        child: LoginForm(),
+        child: const LoginForm(),
       ),
     );
   }

@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "name": "Flutter-Dev",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "-t",
+                "lib/main_dev.dart",
+                "--flavor",
+                "dev"
+            ]
+        },
+        {
+            "name": "Flutter-Prod",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "-t",
+                "lib/main_prod.dart",
+                "--flavor",
+                "prod"
+            ]
+        },
+        {
+            "name": "Flutter-QA",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "-t",
+                "lib/main_qa.dart",
+                "--flavor",
+                "qa"
+            ]
+        }
+    ]
+}

@@ -7,7 +7,7 @@ part 'style.dart';
 class AppTheme {
   const AppTheme._();
 
-  static var color = _Colors();
-  static var gradient = _Gradients();
-  static var style = _Style();
+  static _Colors color = _Colors();
+  static _Gradients gradient = _Gradients();
+  static _Style style = _Style();
 }
